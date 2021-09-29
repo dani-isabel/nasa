@@ -21,6 +21,10 @@ const HeaderStyled = styled.header`
             border-bottom: 3px solid red;
             margin-bottom: -3px;
         }
+        :active {
+            border-bottom: 3px solid red;
+            margin-bottom: -3px;
+        }
    }
 `
 const Header = () => {

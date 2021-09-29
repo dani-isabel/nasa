@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Banner from "./Banner"
 
 const IframeStyled = styled.div`
+height: 56.2vh;
 & iframe {
     width: 100%;
     height: 50vh;
