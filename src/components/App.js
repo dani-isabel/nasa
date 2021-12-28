@@ -13,9 +13,9 @@ const getInfo = (state, urlFetch) => {
 }
 
 const App = () => {
-  const [dailyImg, setDailyImg] = useState("");
+  const [dailyImg, setDailyImg] = useState({});
   const [movies, setMovies] = useState([]);
-  useEffect(async () => {
+  useEffect(() => {
     getInfo(setDailyImg, urlDailyImg)
     getInfo(setMovies, nasaMovies)
     }, [])
@@ -23,7 +23,7 @@ const App = () => {
     return (
     <div>
       <Header />
-      <Iframe url={dailyImg.url} title={dailyImg.title}/>
+      <Iframe url={dailyImg.url || ""} title={dailyImg.title || ""}/>
       <Movies movies={movies.results}/>
     </div>
   );
